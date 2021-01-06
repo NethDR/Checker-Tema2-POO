@@ -1,0 +1,7 @@
+addcurrency GBP £ 1.10
+setstorecurrency GBP
+loadcsv tests/csv-input/amazon_co-ecommerce_cleaned.csv
+getstorecurrency
+listcurrencies 
+savecsv tests/csv-output/test00_0.csv
+quit

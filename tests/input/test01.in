@@ -1,0 +1,24 @@
+listcurrencies
+getstorecurrency
+addcurrency GBP £ 1.10
+listcurrencies
+loadcsv tests/csv-input/amazon_co-ecommerce_sample.csv
+savecsv tests/csv-output/test01_0.csv
+setstorecurrency GBP
+savecsv tests/csv-output/test01_1.csv
+updateparity GBP 1.09
+listcurrencies
+addcurrency USD $ 0.82
+listproducts
+showproduct eac7efa5dbd3d667f26eb3d3ab504464
+listmanufacturers
+listproductsbymanufacturarer Hornby
+listdiscounts
+addiscount PERCENTAGE 30 "30% Black Friday"
+listdiscounts
+addiscount FIXED 15 "-15 RON Newsletter"
+listdiscounts
+applydiscount PERCENTAGE 30
+savecsv tests/csv-output/test01_2.csv
+calculatetotal eac7efa5dbd3d667f26eb3d3ab504464 e12b92dbb8eaee78b22965d2a9bbbd9f
+exit
