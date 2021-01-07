@@ -16,7 +16,9 @@ EXPORT_REFS="tests/csv-refs"
 rm -f ${OUTPUTS}/*
 rm -f ${EXPORTS}/*
 rm -f ${ERRORS}/*
-for i in {0..1}
+
+testcount = $(find ${INPUTS} | grep test0$i | wc -l)
+for ((i = 0; i < testcount; i++))
 do
 	java -jar Tema2.jar < ${INPUTS}/test0$i.in 1> ${OUTPUTS}/test0$i.out 2> ${ERRORS}/test0$i.err
 	if test -z "$(diff --changed-group-format='%>' --unchanged-group-format='' ${OUTPUTS}/test0$i.out ${OUTPUT_REFS}/test0$i.ref | grep -v 2021-01)"
