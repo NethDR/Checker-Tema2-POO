@@ -8,6 +8,6 @@ Se creeaza o arhiva .jar din proiectul cu tema (cautati pe google cum se face in
   - fisierul "amazon_co-ecommerce_sample.csv" (de la adresa : https://drive.google.com/file/d/1scX1vsDiLBV8BQJP-0mK_bQD1JH4o3zN/view) nu este inclus in repo deoarece dimensiunea sa este prea mare. Ar trebui plasat manual la calea "tests/csv-input/".
   - arhiva .jar care contine tema trebuie sa aiba numele "Tema2.jar", si comenzile primite de proces vor veni de la System.in.
   - fisierele de iesire (ceea ce se afiseza la stdout) vor fi gasite la calea "tests/output/", iar toate fisierele .csv in care se face export la calea "tests/csv-output".
-  
+  - testul 00 foloseste ca input fisierul "amazon_co-ecommerce_sample.csv". Daca la citirea acestui fisier intampinati probleme, puteti incerca sa inlocuiti acest fisier cu "amazon_co-ecommerce_cleaned.csv" in fisierul test00.in, output-ul fiind acelasi
   
 Pentru plangeri, tipati pe grupul seriei, dati-mi mesaj pe whatsapp sau sunati la 112 si depuneti plangere penala, cum va e mai convenabil.
