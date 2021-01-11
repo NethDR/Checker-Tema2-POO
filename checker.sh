@@ -17,7 +17,7 @@ rm -f ${OUTPUTS}/test*
 rm -f ${EXPORTS}/test*
 rm -f ${ERRORS}/test*
 
-testcount = $(find ${INPUTS} | grep test0$i | wc -l)
+testcount=$(find ${INPUTS} | grep test0$i | wc -l)
 for ((i = 0; i < testcount; i++))
 do
 	java -jar Tema2.jar < ${INPUTS}/test0$i.in 1> ${OUTPUTS}/test0$i.out 2> ${ERRORS}/test0$i.err
