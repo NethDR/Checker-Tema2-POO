@@ -13,9 +13,9 @@ OUTPUT_REFS="tests/refs"
 # refs for exports/.csv output
 EXPORT_REFS="tests/csv-refs"
 
-rm -f ${OUTPUTS}/*
-rm -f ${EXPORTS}/*
-rm -f ${ERRORS}/*
+rm -f ${OUTPUTS}/test*
+rm -f ${EXPORTS}/test*
+rm -f ${ERRORS}/test*
 
 testcount = $(find ${INPUTS} | grep test0$i | wc -l)
 for ((i = 0; i < testcount; i++))
