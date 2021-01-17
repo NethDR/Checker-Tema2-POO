@@ -20,7 +20,7 @@ rm -f ${ERRORS}/test*
 testcount=$(find ${INPUTS} | grep test0$i | wc -l)
 for ((i = 0; i < testcount; i++))
 do
-	java -jar Tema2.jar < ${INPUTS}/test0$i.in 1> ${OUTPUTS}/test0$i.out 2> ${ERRORS}/test0$i.err
+	java -jar -Dfile.encoding=UTF-8 Tema2.jar < ${INPUTS}/test0$i.in 1> ${OUTPUTS}/test0$i.out 2> ${ERRORS}/test0$i.err
 	if test -z "$(diff --changed-group-format='%>' --unchanged-group-format='' ${OUTPUTS}/test0$i.out ${OUTPUT_REFS}/test0$i.ref | grep -v 2021-01)"
 	then
 		correctexports=1
